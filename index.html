@@ -12,21 +12,21 @@
 
   <button onclick="goToOffer()">🎬 Watch Now</button>
 
-  <script>
-    function goToOffer() {
-      fetch("https://ipapi.co/json/")
-        .then(res => res.json())
-        .then(data => {
-          let tier1 = ["US", "GB", "CA", "AU"];
-          if (tier1.includes(data.country_code)) {
-            setTimeout(() => {
-              window.location.href = "https://www.profitableratecpm.com/yf25ujqtp?key=10e71f5539d82ebc81aa8f08b24ec344"; // replace here
-            }, 1500); // delay for human-like click
-          } else {
-            alert("Sorry, this offer is not available in your country.");
-          }
-        });
-    }
-  </script>
+<script>
+  function goToOffer() {
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => {
+        let tier1 = ["US", "GB", "CA", "AU"];
+        if (tier1.includes(data.country_code)) {
+          setTimeout(() => {
+            window.location.href = "https://YOUR-ADSTERRA-DIRECT-LINK.com"; // ← replace this
+          }, 2000); // 2 sec delay mimics user action
+        } else {
+          alert("Sorry, this offer is only for US/CA/UK.");
+        }
+      });
+  }
+</script>
 </body>
 </html>
