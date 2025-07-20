@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin">
+  <title>Top 10 American Comedy Shows (2025)</title>
+</head>
+<body>
+  <h1>Top 10 American Comedy Shows You Can’t Miss in 2025</h1>
+  <p>Looking for good laughs? Check out this list of hilarious TV shows.</p>
+
+  <button onclick="goToOffer()">🎬 Watch Now</button>
+
+  <script>
+    function goToOffer() {
+      fetch("https://ipapi.co/json/")
+        .then(res => res.json())
+        .then(data => {
+          let tier1 = ["US", "GB", "CA", "AU"];
+          if (tier1.includes(data.country_code)) {
+            setTimeout(() => {
+              window.location.href = "https://YOUR-ADSTERRA-DIRECT-LINK.com"; // replace here
+            }, 1500); // delay for human-like click
+          } else {
+            alert("Sorry, this offer is not available in your country.");
+          }
+        });
+    }
+  </script>
+</body>
+</html>
